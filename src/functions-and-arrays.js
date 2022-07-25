@@ -1,20 +1,45 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(num1, num2) {
+  if (num1 === num2) {
+    return `Both numbers are the same! ${num1}`;
+  } else if (num1 > num2) {
+    return `The largest number is ${num1}`;
+  } else {
+    return `The largest number is ${num2}`;
+  }
+}
+
+//console.log(maxOfTwoNumbers(4, 3));
 
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(array) {
+  longestWord = "";
+  for (let i=0; i < array.length; i++) {
+    if (array[i].length > longestWord.length) {
+      longestWord = array[i];
+    }
+  }
+  return longestWord;
+}
 
-
+//console.log(findLongestWord(words));
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(insertedNumbers) {
+  calculator = 0;
+  for (i = 0; i < insertedNumbers.length; i++) {
+    calculator += insertedNumbers[i];
+  }
+  return calculator;
+}
 
+//console.log(sumNumbers(numbers));
 
 
 // Iteration #3.1 Bonus:
@@ -26,13 +51,28 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arrayOfNumbers) {
+  totalCalculator = 0;
+  for (i = 0; i < arrayOfNumbers.length; i++) {
+    totalCalculator += arrayOfNumbers[i];
+  }
+  return totalCalculator/arrayOfNumbers.length;
+}
 
+//onsole.log(averageNumbers(numbersAvg));
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arrayOfWords) {
+  letterCounter = 0;
+  for (i = 0; i < arrayOfWords.length; i++) {
+    letterCounter += arrayOfWords[i].length;
+  }
+  return letterCounter/arrayOfWords.length;
+ }
+
+ //console.log(averageWordLength(wordsArr));
 
 // Bonus - Iteration #4.1
 function avg() {}
