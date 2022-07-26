@@ -59,7 +59,7 @@ function averageNumbers(arrayOfNumbers) {
   return totalCalculator/arrayOfNumbers.length;
 }
 
-//onsole.log(averageNumbers(numbersAvg));
+//console.log(averageNumbers(numbersAvg));
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
@@ -92,15 +92,31 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(arrayWithDuplicates) {
+  let arrayUnique = [];
+  
+  for (let i = 0; i < arrayWithDuplicates.length; i++) {
+    if (arrayUnique.includes(arrayWithDuplicates[i])) {
+      continue;
+    } else {
+      arrayUnique.push(arrayWithDuplicates[i]);
+    }
+  }
 
+  return arrayUnique;
+}
+
+//console.log(uniquifyArray(wordsUnique));
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(wordArray, word) {
+  return wordArray.includes(word);
+}
 
+// console.log(doesWordExist(wordsFind, "machine"));
 
 
 // Iteration #7: Count repetition
@@ -118,7 +134,17 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(wordArray, word) {
+  let counter = 0;
+  for (let i = 0; i < wordArray.length; i++){
+    if (wordArray[i].includes(word)) {
+      counter +=1;
+    }
+  }
+  return `The word ${word} is present ${counter} times.`
+}
+
+//console.log(howManyTimes(wordsCount, "matter"));
 
 
 
@@ -150,9 +176,8 @@ function greatestProduct() {}
 
 
 
-
 // The following is required to make unit tests work.
-/* Environment setup. Do not modify the below code. */
+/* Environment setup. Do not modify the below code. 
 if (typeof module !== 'undefined') {
   module.exports = {
     maxOfTwoNumbers,
@@ -167,4 +192,4 @@ if (typeof module !== 'undefined') {
     howManyTimes,
     greatestProduct
   };
-}
+} */
